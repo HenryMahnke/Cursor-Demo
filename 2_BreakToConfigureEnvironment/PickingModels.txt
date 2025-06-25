@@ -1,0 +1,67 @@
+picking models! 
+
+What's the difference?!?
+
+Lots of different models exist 
+
+Small models Vs medium models vs big models
+Small models are great for quick questions 
+    syntax questions 
+    how to use simple functions from a package 
+    i.e "how to change the transparency of a line in matplotlib" 
+    Examples of small models 
+        Gemini 2.5 flash <- great "thinking model" 
+        GPT 4.1 <- Pretty good non thinking model 
+        Don't use anything else, but other options are 
+            o3/o4 mini [medium, high]
+            claude 3.5 haiku 
+            grok 3 mini <- BOOOO
+medium models: 
+    medium models are what i most typically use 
+    good for most all questions but also a trap 
+    You might think that they are more capable than they are, and their outputs will 
+    *look* perfect (but won't actually work, or be a good way or programming) 
+    They are great for reading the outputs of - but don't use the outputs 
+
+    Claude sonnet 4 
+    gemini 2.5 pro (sort of medium large)
+
+Tangent: 
+In general, i find it best to not ever use the outputs of a model directly, that is 
+NO copy and pasting 
+NO letting the model update my code automatically, etc (i have a couple small exceptions) 
+    very easy to fall into the trap of letting the AI do everything for you if you are lazy 
+    So have to keep asking yourself - 
+        do I want to know exactly what is happening and be an expert in the code? 
+        Do i want to improve my coding skills?
+        Do I want to be able to explain why i made certain decisions for the code's architecture 
+        Do i not care at all and just really have to get it done(even then, might still be faster for you to do it)
+
+These tools can also help you get up to speed with programming languages really quickly 
+helping you learn conventions like camelCase vs PascalCase vs snake_case for different things 
+and when to use ALL_CAPS, when to use static types, what is a static type, how do you properly 
+deal with allocating and deallocating memory? etc. Of course these are not the same problems you 
+run into when using matlab 
+but with matlab there are performance things that you should be worried about, like preallocating matrices 
+THIS IS A HUGE SPEEDUP or avoiding costly operations, or using different solving methods if you know 
+the nature of the problem. i.e LDLT decompositions, jacobiSVD vs completeOrthogonalDecomposition vs ... 
+
+
+Big models: 
+I seldom use big models, mostly becuase i typically don't have access to them, even with a pro 
+account, they don't give you access to all models, because some are very expensive 
+The best big models right now are 
+
+O3/O3 Pro <- O3 pro only available with max, O3 available widely 
+Claude 4 opus <- only available with max 
+
+These models can make an incredible amount of tool calls, and are very good at poking around MANY 
+files, if not all of the files that are in your project, and working to find a solution over long(relative) 
+time periods, think minutes-> 10 minutes vs millesconds->seconds for small and medium models. 
+
+These are very rarely worth it, because they are still not "that good" at coding, and all models are particularly 
+bad at architecture decisions, and you want to avoid building slop on top of slop on top of slop. 
+But these will only tend to improve, and be able work over long time horizons, so hopefully we have a day 
+where plotting and finding promising things in mountains of data is easier, and faster :)
+
+

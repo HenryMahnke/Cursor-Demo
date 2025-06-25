@@ -1,0 +1,19 @@
+#configuring the models that you are using 
+->> model picker
+
+#configuring the privacy settings 
+
+
+#privacy is important! 
+
+#if you allow AI (chatGPT, claude, grok) to have access to your data (through normal chat interfaces) 
+#there is a guarantee that they will train on your data. Even recently, temporary chats - the incognito mode for AI
+#chatbots has come under fire and no longer appears to be private. 
+
+Cursor on the other hand, is SOC2 compliant, and unless you let them, they don't allow the model providers to train on your data 
+Nor do they train on your data for their internal models (like cursor tab, and cursor-small)
+
+
+#downloading extensions
+Originally extensions were instantly ported over from vscode
+but then microsoft got angry, and started pulling extensions that anysphere is now redeveloping them

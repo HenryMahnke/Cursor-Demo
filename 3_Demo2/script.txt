@@ -1,0 +1,10 @@
+PrototypeCDPR... is a very common output that we get from our motion capture system where we have a bunch of header data 
+and then actual data such as what frame it was taken in where it samples at 100 hz, and then what units things are in 
+
+So say we just want to plot that data and see it in space to make sure that visually everything checks out, 
+but lets say that in the future we are going to compare it to some data that we collect from the robot, 
+but that gets collected at 10hz(Yikes! may need to get a better robot). But for this demo, we will downsample by 10 
+
+
+All in, we know that we need to downsample from 100hz to 10hz, and that we want to plot the 3d trajectory with matplotlib 
+(like normal plot in matlab... if you're one of those people...)
