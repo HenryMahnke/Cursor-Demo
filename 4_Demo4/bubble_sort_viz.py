@@ -33,6 +33,7 @@ class BubbleSortVisualizer:
         self.ax.set_xlabel("Index")
         self.ax.set_ylabel("Value")
         self.ax.set_title("Bubble Sort Visualization")
+        self.highlight = True
 
         # Create bars
         self.bars = self.ax.bar(
@@ -103,6 +104,16 @@ class BubbleSortVisualizer:
         if idx2 < len(self.bars):
             self.bars[idx2].set_color(color)
 
+    def animate_2(self,frame): 
+        if self.highlight and not self.sort_complete:
+            self.highlight_comparison(self.j, self.j + 1, "blue")
+            self.highlight = False
+        else: 
+            self.highlight = True
+            self.animate(frame)
+        return list(self.bars) + self.value_labels + [self.stats_text]
+
+
     def animate(self, frame):
         self.step = frame
 
@@ -117,7 +128,7 @@ class BubbleSortVisualizer:
         # Bubble sort algorithm
         if self.j < self.n - self.i - 1:
             # Highlight the elements being compared
-            self.highlight_comparison(self.j+1, self.j + 2, "blue")
+            self.highlight_comparison(self.j, self.j + 1, "blue")
             self.comparisons += 1
 
             # Compare and swap if necessary
@@ -128,7 +139,6 @@ class BubbleSortVisualizer:
                     self.data[self.j],
                 )
                 self.swaps += 1
-                # Highlight swapped elements in red
             self.j += 1
         else:
             # End of current pass, move to next pass
@@ -145,11 +155,11 @@ class BubbleSortVisualizer:
     def start_animation(self, interval=500):
         """Start the animation"""
         # Calculate maximum frames needed (worst case for bubble sort)
-        max_frames = self.n * self.n + 10  # Add some buffer
+        max_frames = self.n * self.n + 10  # Add a few extra
 
         ani = animation.FuncAnimation(
             self.fig,
-            self.animate,
+            self.animate_2,
             frames=max_frames,
             interval=interval,
             repeat=False,
@@ -171,7 +181,7 @@ def main():
     print(f"Original list: {randomList}")
     print("Starting bubble sort visualization...")
 
-    visualize_bubble_sort(randomList, 2000)  # 800ms between steps
+    visualize_bubble_sort(randomList, 100)  # 800ms between steps
 
 
 if __name__ == "__main__":
