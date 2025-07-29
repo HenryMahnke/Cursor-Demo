@@ -1,0 +1,1 @@
+This was a demonstration for the Student Research Mentorship Program for the Aerospace Department at UMN walking through what cursor is, and how it could help them. During the talk we talked about the pros and cons of using AI, and how to use it with most benefit and least downside.
